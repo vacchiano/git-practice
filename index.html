@@ -1,5 +1,56 @@
 <!--
-  --------------- HOW TO WORK ON MULTIPLE GIT BRANCHES WORKING ON SEPARATE FILES ---------------
+  --------------- HOW TO WORK ON MULTIPLE GIT BRANCHES WORKING ON SEPARATE FILES (diff files) ---------------
+
+  CREATE 1st FEATURE BRANCH
+$ git checkout -b fix-about-page'
+
+MAKE & COMMIT CHANGES
+$ git add .
+$ git commit -m "working on about us page"
+
+GO BACK TO MASTER/MAIN
+$ git checkout master
+
+  CREATE 2nd FEATURE BRANCH
+$ git checkout -b fix-index-page
+
+MAKE & COMMIT CHANGES
+$ git add .
+$ git commit -m "fix index page"
+
+Push the changed to remote/origin (will create branch on remote)
+$ git push origin fix-index-page
+
+Checkout main/master branch
+$ git checkout master
+
+MERGE THE FEATURE BRANCH INTO MAIN/MASTER
+$ git merge fix-index-page
+
+PUSH THE NEW MASTER TO REMOTE
+$ git push
+
+DELETE FEATURE BRANCH LOCALLY (and can delete on remote)
+$ git branch -d fix-index-page
+
+GO BACK TO OTHER FEATURE BRANCH AND WORK
+$ git checkout fix-about-page
+
+CREATE AND COMMIT CHANGES
+$ git add .
+$ git commit -m "added div"
+
+PUSH TO REMOTE
+$ git push origin fix-about-page
+
+CHECKOUT MASTER BRANCH & MERGE FEATURE BRANCH
+$ git checkout master
+$ git merge fix-about-page
+
+PUSH MASTER TO REMOTE
+$ git push
+
+CAN DELETE feature branch locally and on remote
  -->
 
 <!DOCTYPE html>
